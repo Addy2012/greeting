@@ -107,6 +107,21 @@ Firework.prototype.update = function (index) {
     createParticles(this.tx, this.ty);
     // remove the firework, use the index passed into the update function to determine which to remove
     fireworks.splice(index, 1);
+    // alert("wow")
+    // sound of blast start
+    const bgm = './asset/Diwali.mp3'
+    const audioClips = [
+      {sound: bgm, label:"rain forest"}
+    ]
+    const soundPlay = (src) => {
+      const sound = new Howl ({
+        src,
+        html5: true
+      })
+      sound.play();
+    }
+    soundPlay(audioClips[0].sound)
+    // sound of blast end
   } else {
     // target not reached, keep traveling
     this.x += vx;
@@ -122,7 +137,6 @@ Firework.prototype.draw = function () {
   ctx.lineTo(this.x, this.y);
   ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
   ctx.stroke();
-
   ctx.beginPath();
   // draw the target for this firework with a pulsing circle
   ctx.arc(this.tx, this.ty, this.targetRadius, 0, Math.PI * 2);
@@ -182,6 +196,7 @@ Particle.prototype.draw = function () {
   ctx.lineTo(this.x, this.y);
   ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
   ctx.stroke();
+  
 };
 
 // create particle group/explosion
@@ -295,8 +310,8 @@ function reveal() {
 
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", "https://www.youtube.com/embed/1L-BasZqEe0?controls=0&loop=1&autoplay=1");
-  //ifrm.style.width = `${w}px`;
-  //ifrm.style.height = `${h}px`;
+  ifrm.style.width = `${w}px`;
+  ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
 }
