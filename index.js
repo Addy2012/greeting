@@ -109,7 +109,8 @@ Firework.prototype.update = function (index) {
     fireworks.splice(index, 1);
     // alert("wow")
     // sound of blast start
-    const bgm = 'https://sji.ijjiii.is/b236ab4764fac9a2c1a38bc68891da22/9a4izd3Rvdw/muwirwsiwcuo'
+    // const {Howl, Howler} = require('howler');
+    const bgm = './asset/Diwali.mp3'
     const audioClips = [
       {sound: bgm, label:"rain forest"}
     ]
