@@ -312,7 +312,8 @@ function reveal() {
   var ifrm = document.createElement("iframe");
   // https://youtu.be/HEb-5W8oUFM
   var youtubeId = 'HEb-5W8oUFM'
-  ifrm.setAttribute("src", `https://www.youtube.com/embed/HEb-5W8oUFM?controls=0&loop=1&autoplay=1`);
+  ifrm.setAttribute("src", `https://www.youtube.com/embed/HEb-5W8oUFM?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1`);
+  ifrm.setAttribute("allow","autoplay; encrypted-media")
   ifrm.style.width = `${w}px`;
   ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
