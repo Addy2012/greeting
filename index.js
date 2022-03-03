@@ -110,10 +110,10 @@ Firework.prototype.update = function (index) {
     // alert("wow")
     // sound of blast start
     // const {Howl, Howler} = require('howler');
-    // const bgm = './asset/Diwali.mp3'
-    // const audioClips = [
-    //   {sound: bgm, label:"rain forest"}
-    // ]
+    const bgm = './asset/Diwali.mp3'
+    const audioClips = [
+      {sound: bgm, label:"rain forest"}
+    ]
     const soundPlay = (src) => {
       const sound = new Howl ({
         src,
@@ -121,7 +121,7 @@ Firework.prototype.update = function (index) {
       })
       sound.play();
     }
-    // soundPlay(audioClips[0].sound)
+    soundPlay(audioClips[0].sound)
     // sound of blast end
   } else {
     // target not reached, keep traveling
