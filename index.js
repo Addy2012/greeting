@@ -110,18 +110,18 @@ Firework.prototype.update = function (index) {
     // alert("wow")
     // sound of blast start
     // const {Howl, Howler} = require('howler');
-    const bgm = './asset/Diwali.mp3'
-    const audioClips = [
-      {sound: bgm, label:"rain forest"}
-    ]
-    const soundPlay = (src) => {
-      const sound = new Howl ({
-        src,
-        html5: true
-      })
-      sound.play();
-    }
-    soundPlay(audioClips[0].sound)
+    // const bgm = './asset/Diwali.mp3'
+    // const audioClips = [
+    //   {sound: bgm, label:"rain forest"}
+    // ]
+    // const soundPlay = (src) => {
+    //   const sound = new Howl ({
+    //     src,
+    //     html5: true
+    //   })
+    //   sound.play();
+    // }
+    // soundPlay(audioClips[0].sound)
     // sound of blast end
   } else {
     // target not reached, keep traveling
@@ -215,7 +215,7 @@ function loop() {
   requestAnimFrame(loop);
 
   // increase the hue to get different colored fireworks over time
-  hue += 0.5;
+  hue += 0.7;
 
   // normally, clearRect() would be used to clear the canvas
   // we want to create a trailing effect though
@@ -311,8 +311,8 @@ function reveal() {
 
   var ifrm = document.createElement("iframe");
   // https://youtu.be/HEb-5W8oUFM
-  var youtubeId = 'HEb-5W8oUFM'
-  ifrm.setAttribute("src", `https://www.youtube.com/embed/oGneAab3e88?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1`);
+  // var youtubeId = 'HEb-5W8oUFM'
+  ifrm.setAttribute("src", `https://www.youtube.com/embed/QSykH7lf5os?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1`);
   ifrm.setAttribute("allow","autoplay; encrypted-media")
   ifrm.style.width = `${w}px`;
   ifrm.style.height = `${h}px`;
